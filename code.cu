@@ -57,15 +57,15 @@ void funcionCPU(float *R, float *G, float *B, float *Rout, float *Gout, float *B
 		int nueva_pieza = Orden[pieza];
 		
 		// Posicion final del pixel
-		int fi = ( nueva_pieza % P ) * S + pi;
-		int fj = ( nueva_pieza / P ) * S + pj;
+		int fi = (nueva_pieza % P ) * S + i % S;
+		int fj = (nueva_pieza / P ) * S + j % S;
 
 		// Indexar
 		int Idx_nueva = fj * N + fi;
 
 		Rout[Idx_nueva] = R[Idx];	
 		Gout[Idx_nueva] = G[Idx];	
-		Bout[Idx_nueva] = B[Idx];	
+		Bout[Idx_nueva] = B[Idx];		
 	}
 }
 

@@ -167,7 +167,6 @@ int main(int argc, char **argv){
 
     // Procesar imagen
     kernelGPU<<<grid_size, block_size>>>(Rdev, Gdev, Bdev, Rdevout, Gdevout, Bdevout, N, S, Odev);
-    cudaDeviceSynchronize();
 
     cudaEventRecord(ct2);
     cudaEventSynchronize(ct2);

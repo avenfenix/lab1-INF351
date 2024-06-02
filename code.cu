@@ -1,5 +1,3 @@
-%%cuda
-
 #include <iostream>
 #include <time.h>
 #include <cuda_runtime.h>
